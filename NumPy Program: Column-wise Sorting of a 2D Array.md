@@ -1,30 +1,28 @@
-# NumPy Program: Replace the Second Column in a 2D Array
+# NumPy Program: Column-wise Sorting of a 2D Array
 
 ## 🎯 Aim
-To write a **NumPy** program that deletes the second column from a given 2D array and inserts a new column at the same position.
+To write a **NumPy** program that sorts the elements in each column of a given 2D array in ascending order.
 
 ## 🧠 Algorithm
+
 1. **Import NumPy**: Start by importing the NumPy library.
-2. **Get Input**: Get a 2D NumPy array and a new column (as another array) from the user.
-3. **Delete Column**: Use `np.delete()` to remove the second column (index 1) from the original array.
-4. **Insert Column**: Use `np.insert()` to insert the new column at the second column's original position.
-5. **Display Result**: Print the updated array with the replaced column.
+2. **Get Input**: Accept a 2D NumPy array from the user.
+3. **Sort Column-wise**: Use the `np.sort()` function with `axis=0` to sort each column in ascending order.
+4. **Store Result**: Store the sorted result in a new array.
+5. **Display Output**: Print the original array and the column-wise sorted array.
 
 ## 🧾 Program
 ~~~
 import numpy as np
 a=np.array(eval(input()))
-b=np.array(eval(input()))
-print("Printing Original array")
+print("Given array")
+print(end=" ")
 print(a)
-print("Array after deleting column 2 on axis 1")
-c=np.delete(a,1,axis=1)
-print(c)
-print("Array after inserting column 2 on axis 1")
-print(np.insert(c,1,b,axis=1))
+print()
+print(np.sort(a,axis=0))
 ~~~
 ## Output
-![445217178-0984de0b-f34a-45e7-9005-a3e302a362de](https://github.com/user-attachments/assets/94e57a28-812a-49b6-8f4d-e8542f522bf4)
+![445216150-4637e1eb-1ecf-4c37-bcf8-bf8e781242a7](https://github.com/user-attachments/assets/d12d5383-39b0-4cad-9474-9521db8aae13)
 
 ## Result
-Thus the python program for replacing column in numpy has been implemented and executed successfully.
+Thus the python program for sorting each column in numpy has been implemented and executed successfully.
